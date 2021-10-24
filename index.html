@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Hide_show</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section page_1">1 <button class="btn1">continue</button></div>
+        <div class="section page_2" style="display: none;">2 <button class="btn2">continue</button></div>
+        <div class="section page_3" style="display: none;">3 <button class="btn3">continue</button></div>
+        <div class="section page_4" style="display: none;">4 <button class="btn4">continue</button></div>
+
+        <form action="/action_page.php">
+          <fieldset>
+           <legend>Personalia:</legend>
+           <label for="fname">First name:</label>
+           <input type="text" id="fname" name="fname"><br><br>
+           <label for="lname">Last name:</label>
+           <input type="text" id="lname" name="lname"><br><br>
+           <label for="email">Email:</label>
+           <input type="email" id="email" name="email"><br><br>
+           <label for="birthday">Birthday:</label>
+           <input type="date" id="birthday" name="birthday"><br><br>
+           <input type="submit" value="Submit">
+          </fieldset>
+         </form>
+         
+        
+    </div>
+
+    <script>
+        $(document).ready(function () {
+        $(".btn1").click(function () {
+          $(".page_1").hide();
+          $(".page_2").show();
+        });
+        
+        $(".btn2").click(function () {
+          $(".page_2").hide();
+          $(".page_3").show();
+        });
+        $(".btn3").click(function () {
+          $(".page_3").hide();
+          $(".page_4").show();
+        });
+        
+      });
+
+    </script>
+</body>
+</html>
